@@ -7,17 +7,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f8fafc;
       color: #0f172a;
+      overflow-x: hidden;
+    }
+
+    .topbar {
+      width: 100%;
+      background: #0f172a;
+      color: #fff;
+      text-align: center;
+      padding: 8px;
+      font-size: 0.8rem;
     }
 
     .container {
       max-width: 900px;
       margin: auto;
       padding: 20px;
+      text-align: center;
     }
 
     h1 {
@@ -42,7 +58,6 @@
       font-weight: bold;
       text-decoration: none;
       border-radius: 10px;
-      text-align: center;
       margin-top: 15px;
       font-size: 1rem;
     }
@@ -56,6 +71,7 @@
       grid-template-columns: 1fr;
       gap: 15px;
       margin-top: 20px;
+      text-align: left;
     }
 
     .card {
@@ -72,8 +88,8 @@
     }
 
     .logo {
-      max-width: 160px;
-      margin-bottom: 20px;
+      max-width: 140px;
+      margin-bottom: 15px;
     }
 
     .micro {
@@ -135,6 +151,10 @@
       .sticky-cta {
         display: none;
       }
+
+      .logo {
+        max-width: 180px;
+      }
     }
 
   </style>
@@ -142,6 +162,12 @@
 </head>
 
 <body>
+
+<!-- BARRA DE TOPO -->
+
+<div class="topbar">
+  🔒 Pagamento seguro • Mais de X empresas organizando o financeiro • Comece hoje — leva menos de 5 minutos
+</div>
 
 <div class="container">
 
@@ -161,7 +187,7 @@
 
   <p class="micro">Sem compromisso. Cancelamento simples.</p>
 
-  <!-- IMAGEM PRINCIPAL (PRINT FORTE) -->
+  <!-- IMAGEM PRINCIPAL -->
 
   <img src="sistema1.jpg" alt="Dashboard UniFin">
 
