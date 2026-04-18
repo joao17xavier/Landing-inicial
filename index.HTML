@@ -1,60 +1,72 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>UniFin - Clareza Financeira para Empresas</title>
+  <title>UniFin - Clareza Financeira</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #fff;
+      background: #f8fafc;
+      color: #0f172a;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 900px;
       margin: auto;
       padding: 20px;
     }
 
     h1 {
-      font-size: 2.5rem;
-      line-height: 1.2;
+      font-size: 1.8rem;
+      line-height: 1.3;
+      margin-bottom: 10px;
     }
 
     h2 {
-      color: #94a3b8;
+      font-size: 1rem;
+      color: #475569;
       font-weight: normal;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      margin-bottom: 8px;
     }
 
     .cta {
-      display: inline-block;
-      background: #22c55e;
-      color: #000;
-      padding: 15px 25px;
+      display: block;
+      width: 100%;
+      background: #2563eb;
+      color: #fff;
+      padding: 18px;
       font-weight: bold;
       text-decoration: none;
-      border-radius: 8px;
-      margin-top: 20px;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 15px;
+      font-size: 1rem;
     }
 
     .section {
-      margin-top: 60px;
+      margin-top: 50px;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      margin-top: 20px;
     }
 
     .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 10px;
+      background: #ffffff;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
 
     img {
@@ -63,80 +75,222 @@
       margin-top: 20px;
     }
 
+    .logo {
+      max-width: 160px;
+      margin-bottom: 20px;
+    }
+
+    .micro {
+      color: #64748b;
+      margin-top: 8px;
+      font-size: 0.85rem;
+    }
+
     footer {
       margin-top: 60px;
       text-align: center;
-      color: #64748b;
+      color: #94a3b8;
+      font-size: 0.9rem;
     }
+
+    /* BOTÃO FIXO MOBILE */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #ffffff;
+      padding: 10px;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    }
+
+    .sticky-cta a {
+      display: block;
+      background: #22c55e;
+      color: #000;
+      text-align: center;
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* DESKTOP */
+    @media (min-width: 768px) {
+
+      h1 {
+        font-size: 2.6rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cta {
+        display: inline-block;
+        width: auto;
+      }
+
+      .sticky-cta {
+        display: none;
+      }
+    }
+
   </style>
+
 </head>
 
 <body>
 
 <div class="container">
 
-  <!-- HERO -->
-  <h1>Você não precisa de mais um sistema financeiro.</h1>
-  <h1>Precisa saber onde está perdendo dinheiro.</h1>
+  <!-- LOGO -->
 
-  <h2>O UniFin organiza, analisa e mostra exatamente o que está errado no seu financeiro — sem planilhas e sem achismo.</h2>
+  <img src="logo.png" alt="UniFin" class="logo">
+
+  <!-- HERO -->
+
+  <h1>Se você não sabe exatamente quanto está lucrando, você está perdendo dinheiro.</h1>
+
+  <h2>O UniFin mostra em poucos minutos onde sua empresa está vazando dinheiro — e o que fazer para corrigir.</h2>
 
   <a class="cta" href="https://buy.stripe.com/5kQ00k9a52Fl8Fed6S0kE02">
     Testar 7 dias grátis
   </a>
 
-  <!-- IMAGEM DO SISTEMA -->
+  <p class="micro">Sem compromisso. Cancelamento simples.</p>
+
+  <!-- IMAGEM -->
+
+  <img src="sistema1.png" alt="Dashboard UniFin">
+
+  <!-- IDENTIFICAÇÃO -->
+
   <div class="section">
-    <img src="sistema1.png" alt="Dashboard UniFin">
+    <h1>Se isso acontece na sua empresa, você não está no controle:</h1>
+
+```
+<div class="cards">
+  <div class="card"><p>Você fatura… mas não sabe quanto realmente sobra.</p></div>
+  <div class="card"><p>O dinheiro entra, mas nunca parece suficiente.</p></div>
+  <div class="card"><p>Decisões baseadas em “feeling”.</p></div>
+  <div class="card"><p>Dependência de planilhas bagunçadas.</p></div>
+</div>
+```
+
   </div>
 
   <!-- BENEFÍCIOS -->
+
   <div class="section">
-    <h1>O que você resolve com o UniFin:</h1>
+    <h1>O que muda quando você usa o UniFin:</h1>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Controle total</h3>
-        <p>Veja todas as entradas e saídas organizadas em um só lugar.</p>
-      </div>
-
-      <div class="card">
-        <h3>Decisão rápida</h3>
-        <p>Saiba exatamente onde cortar custos e aumentar lucro.</p>
-      </div>
-
-      <div class="card">
-        <h3>Sem planilhas</h3>
-        <p>Pare de depender de Excel bagunçado e dados desencontrados.</p>
-      </div>
-
-      <div class="card">
-        <h3>Clareza real</h3>
-        <p>Entenda sua empresa como um gestor, não como um apagador de incêndio.</p>
-      </div>
-    </div>
+```
+<div class="cards">
+  <div class="card">
+    <h3>Clareza imediata</h3>
+    <p>Você enxerga o problema sem precisar analisar planilhas.</p>
   </div>
 
-  <!-- MAIS IMAGENS -->
+  <div class="card">
+    <h3>Decisão segura</h3>
+    <p>Para de “achar” e começa a agir com base em números.</p>
+  </div>
+
+  <div class="card">
+    <h3>Mais lucro</h3>
+    <p>Descobre onde está perdendo dinheiro.</p>
+  </div>
+
+  <div class="card">
+    <h3>Controle real</h3>
+    <p>Sua empresa deixa de ser imprevisível.</p>
+  </div>
+</div>
+```
+
+  </div>
+
+  <!-- IMAGEM -->
+
   <div class="section">
     <img src="sistema2.png" alt="Relatórios UniFin">
   </div>
 
-  <!-- CTA FINAL -->
-  <div class="section">
-    <h1>Teste por 7 dias. Sem risco.</h1>
-    <h2>Se não te ajudar a ter mais controle, você simplesmente não continua.</h2>
+  <!-- PROVA -->
 
-    <a class="cta" href="https://buy.stripe.com/5kQ00k9a52Fl8Fed6S0kE02">
-      Começar agora
-    </a>
+  <div class="section">
+    <h1>Quem começou a usar, já viu a diferença:</h1>
+
+```
+<div class="cards">
+  <div class="card">
+    <p><strong>“Eu achava que tinha lucro… mas era ilusão.”</strong></p>
+    <p>Descobri custos escondidos e consegui ajustar em poucas semanas.</p>
+    <p class="micro">Carlos — Comércio</p>
   </div>
 
-  <!-- AUTORIDADE -->
+  <div class="card">
+    <p><strong>“Parei de decidir no achismo.”</strong></p>
+    <p>Hoje eu sei exatamente o que está acontecendo no financeiro.</p>
+    <p class="micro">Juliana — Serviços</p>
+  </div>
+</div>
+```
+
+  </div>
+
+  <!-- OBJEÇÃO -->
+
+  <div class="section">
+    <h1>Se você já tem sistema ou planilha:</h1>
+
+```
+<h2>Mas não consegue responder isso com segurança:</h2>
+
+<div class="cards">
+  <div class="card"><p>Quanto você lucrou mês passado?</p></div>
+  <div class="card"><p>Onde cortar custo sem afetar operação?</p></div>
+  <div class="card"><p>Qual decisão tomar agora?</p></div>
+</div>
+
+<h2>Então você não tem controle. Só tem dados soltos.</h2>
+```
+
+  </div>
+
+  <!-- CTA FINAL -->
+
+  <div class="section">
+    <h1>Teste por 7 dias.</h1>
+    <h2>Ou você ganha clareza… ou continua no escuro.</h2>
+
+```
+<a class="cta" href="https://buy.stripe.com/5kQ00k9a52Fl8Fed6S0kE02">
+  Começar agora
+</a>
+
+<p class="micro">Sem compromisso. Cancelamento simples.</p>
+```
+
+  </div>
+
   <footer>
     <p>Desenvolvido por Mori Tech - Soluções Tecnológicas</p>
   </footer>
 
+</div>
+
+<!-- CTA FIXO MOBILE -->
+
+<div class="sticky-cta">
+  <a href="https://buy.stripe.com/5kQ00k9a52Fl8Fed6S0kE02">
+    Testar grátis agora
+  </a>
 </div>
 
 </body>
