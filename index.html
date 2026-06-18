@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4450521855228559');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4450521855228559&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<meta charset="UTF-8">
+<title>UniFin — Seu Dinheiro de Empresa sob Controle Real</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="O sistema financeiro completo para pequenas e médias empresas. Separe PF de PJ, preveja seu caixa, emita NFS-e e tome decisões com dados reais. 7 dias grátis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --brand:        #1776f4;
+  --brand-dark:   #1260cc;
+  --brand-light:  #e8f1fe;
+  --brand-glow:   rgba(23,118,244,0.22);
+  --ink:          #0d1117;
+  --ink-soft:     #374151;
+  --ink-muted:    #6b7280;
+  --bg:           #f5f7fa;
+  --surface:      #ffffff;
+  --border:       #dde3ed;
+  --green:        #16a34a;
+  --green-bg:     #f0fdf4;
+  --green-border: #bbf7d0;
+  --danger:       #dc2626;
+  --gold-bg:      #fffbeb;
+  --gold-border:  #fde68a;
+  --gold-text:    #92400e;
+  --dark-bg:      #0d1117;
+  --radius:       12px;
+  --shadow:       0 2px 16px rgba(13,17,23,0.07);
+  --shadow-lg:    0 8px 40px rgba(13,17,23,0.12);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  overflow-x: hidden;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── TOPBAR ── */
+.topbar {
+  background: var(--brand);
+  color: #fff;
+  text-align: center;
+  padding: 9px 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.topbar b { background: rgba(255,255,255,0.2); border-radius: 4px; padding: 1px 8px; margin: 0 2px; }
+
+/* ── NAV ── */
+nav {
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo img { height: 34px; display: block; }
+.nav-cta {
+  background: var(--brand);
+  color: #fff;
+  padding: 9px 22px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.83rem;
+  text-decoration: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
+  box-shadow: 0 2px 10px var(--brand-glow);
+  white-space: nowrap;
+}
+.nav-cta:hover { background: var(--brand-dark); transform: translateY(-1px); box-shadow: 0 4px 16px var(--brand-glow); }
+
+/* ── HERO ── */
+.hero {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 64px 24px 52px;
+  text-align: center;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--brand-light);
+  color: var(--brand-dark);
+  border: 1px solid rgba(23,118,244,0.25);
+  border-radius: 100px;
+  padding: 5px 16px;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.badge-dot { width: 7px; height: 7px; background: var(--brand); border-radius: 50%; animation: pulse 1.8s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
+
+.hero h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2rem, 5.4vw, 3.3rem);
+  font-weight: 800;
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--brand);
+  position: relative;
+  display: inline-block;
+}
+.hero h1 em::after {
+  content: '';
+  position: absolute;
+  bottom: 2px; left: 0; right: 0;
+  height: 3px;
+  background: var(--brand);
+  border-radius: 2px;
+  opacity: 0.28;
+}
+
+.hero-sub {
+  font-size: clamp(1rem, 2.3vw, 1.12rem);
+  color: var(--ink-soft);
+  max-width: 560px;
+  margin: 0 auto 38px;
+  line-height: 1.72;
+}
+
+/* ── PRICE BOX ── */
+.price-box {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  padding: 28px 28px 22px;
+  max-width: 420px;
+  margin: 0 auto 20px;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+.price-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--brand), #60a5fa);
+}
+.price-tag-label {
+  font-size: 0.71rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--ink-muted);
+  margin-bottom: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.price-original { font-size: 0.92rem; color: var(--ink-muted); text-decoration: line-through; }
+.price-promo {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  justify-content: center;
+  margin: 4px 0 10px;
+}
+.price-promo .currency { font-size: 1.2rem; font-weight: 700; color: var(--ink); font-family: 'Plus Jakarta Sans', sans-serif; }
+.price-promo .value { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 3.4rem; font-weight: 800; color: var(--brand); line-height: 1; letter-spacing: -0.04em; }
+.price-promo .period { font-size: 0.88rem; color: var(--ink-muted); }
+.price-savings {
+  background: var(--gold-bg);
+  border: 1px solid var(--gold-border);
+  color: var(--gold-text);
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 0.77rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 14px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.trial-notice {
+  background: var(--green-bg);
+  border: 1px solid var(--green-border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  color: #166534;
+  font-weight: 500;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+.trial-notice strong { font-weight: 700; }
+
+.cta-main {
+  display: block;
+  width: 100%;
+  background: var(--brand);
+  color: #fff;
+  padding: 17px 20px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 1rem;
+  text-decoration: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
+  box-shadow: 0 4px 18px var(--brand-glow);
+  letter-spacing: -0.01em;
+}
+.cta-main:hover { background: var(--brand-dark); transform: translateY(-2px); box-shadow: 0 8px 28px var(--brand-glow); }
+.cta-sub { font-size: 0.72rem; color: var(--ink-muted); margin-top: 10px; line-height: 1.5; }
+
+.trust-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.79rem;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+/* ── MOCKUP ── */
+.mockup-wrap {
+  max-width: 860px;
+  margin: 48px auto 0;
+  padding: 0 24px;
+}
+.mockup-wrap img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+}
+
+/* ── SECTION BASE ── */
+section {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+.section-eyebrow {
+  font-size: 0.71rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--brand);
+  margin-bottom: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.section-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.55rem, 3.8vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+.section-sub {
+  font-size: 1rem;
+  color: var(--ink-soft);
+  max-width: 540px;
+  line-height: 1.72;
+}
+
+/* ── SOCIAL PROOF BAR ── */
+.proof-bar {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 24px;
+}
+.proof-bar-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.proof-stat { text-align: center; }
+.proof-num {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--brand);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.proof-label { font-size: 0.75rem; color: var(--ink-muted); margin-top: 2px; }
+.proof-divider { width: 1px; height: 36px; background: var(--border); }
+
+/* ── DOR REAL — dark ── */
+.dor-bg { background: var(--dark-bg); }
+.dor-bg section { color: #fff; }
+.dor-bg .section-eyebrow { color: #60a5fa; }
+.dor-bg .section-title { color: #f1f5f9; }
+.dor-bg .section-sub { color: #94a3b8; }
+
+.dor-intro {
+  background: rgba(220,38,38,0.1);
+  border: 1px solid rgba(220,38,38,0.3);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 32px;
+  font-size: 0.95rem;
+  color: #fca5a5;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.dor-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 32px;
+}
+.dor-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  transition: background 0.2s, border-color 0.2s;
+  cursor: default;
+}
+.dor-item:hover { background: rgba(255,255,255,0.07); border-color: rgba(23,118,244,0.3); }
+.dor-icon {
+  width: 38px; height: 38px;
+  background: rgba(23,118,244,0.15);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.05rem;
+}
+.dor-body { padding-top: 2px; }
+.dor-title { font-size: 0.93rem; font-weight: 700; color: #f1f5f9; margin-bottom: 4px; font-family: 'Plus Jakarta Sans', sans-serif; }
+.dor-desc { font-size: 0.87rem; color: #94a3b8; line-height: 1.58; }
+
+/* ── SOLUÇÃO — como resolve ── */
+.solucao-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 40px;
+}
+.solucao-item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 20px;
+  align-items: flex-start;
+}
+.solucao-num {
+  width: 56px; height: 56px;
+  background: var(--brand-light);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--brand);
+  flex-shrink: 0;
+}
+.solucao-body {}
+.solucao-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-bottom: 5px; letter-spacing: -0.01em; }
+.solucao-desc { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.65; }
+.solucao-tag {
+  display: inline-block;
+  margin-top: 8px;
+  background: var(--green-bg);
+  border: 1px solid var(--green-border);
+  color: #166534;
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ── MÓDULOS GRID ── */
+.modulos-bg { background: #f0f6ff; border-top: 1px solid #c7dbfd; border-bottom: 1px solid #c7dbfd; }
+.modulos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+  margin-top: 36px;
+}
+.modulo-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 18px 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.modulo-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand), #60a5fa);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.modulo-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.modulo-card:hover::before { opacity: 1; }
+.modulo-icon { font-size: 1.4rem; margin-bottom: 9px; }
+.modulo-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.92rem; font-weight: 700; color: var(--ink); margin-bottom: 5px; }
+.modulo-card p { font-size: 0.82rem; color: var(--ink-soft); line-height: 1.55; }
+
+/* ── SCREENSHOTS ── */
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 32px;
+}
+.screenshot-item { position: relative; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow); }
+.screenshot-item img { width: 100%; display: block; }
+.screenshot-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(13,17,23,0.7));
+  color: #fff;
+  padding: 20px 16px 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ── TESTIMONIALS ── */
+.testi-bg { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.testi-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 36px;
+}
+.testi-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  position: relative;
+}
+.testi-card::before { content: '"'; position: absolute; top: 14px; left: 18px; font-size: 3.5rem; color: var(--brand-light); font-family: Georgia, serif; line-height: 1; }
+.stars { color: #f59e0b; font-size: 0.88rem; margin-bottom: 10px; letter-spacing: 2px; }
+.testi-card blockquote { font-size: 0.95rem; color: var(--ink); line-height: 1.68; margin-bottom: 16px; padding-top: 8px; }
+.testi-author { display: flex; align-items: center; gap: 11px; }
+.testi-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  flex-shrink: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.testi-name { font-weight: 700; font-size: 0.88rem; color: var(--ink); font-family: 'Plus Jakarta Sans', sans-serif; }
+.testi-role { font-size: 0.76rem; color: var(--ink-muted); }
+
+/* ── COMPARISON ── */
+.comparison-wrap { overflow-x: auto; margin-top: 36px; }
+.comparison-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  min-width: 480px;
+}
+.comparison-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  background: var(--dark-bg);
+  color: #fff;
+  padding: 14px 18px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.comparison-header .col-1 { text-align: left; }
+.comparison-header .col-4 { color: #60a5fa; }
+.comparison-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 12px 18px;
+  font-size: 0.87rem;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+}
+.comparison-row:last-child { border-bottom: none; }
+.comparison-row:nth-child(even) { background: #f9fafc; }
+.comparison-row .col-1 { font-weight: 500; color: var(--ink); font-size: 0.85rem; }
+.comparison-row .col-2,
+.comparison-row .col-3,
+.comparison-row .col-4 { text-align: center; }
+.check { color: var(--brand); font-weight: 800; font-size: 1.1rem; }
+.check-partial { color: #f59e0b; font-weight: 700; font-size: 0.78rem; }
+.cross { color: var(--danger); font-weight: 800; font-size: 1.1rem; }
+
+/* ── FAQ ── */
+.faq-list { margin-top: 32px; display: flex; flex-direction: column; gap: 10px; }
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.18s;
+}
+.faq-item.open { border-color: var(--brand); }
+.faq-q {
+  padding: 17px 20px;
+  font-weight: 600;
+  font-size: 0.93rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: color 0.15s;
+  gap: 12px;
+}
+.faq-item.open .faq-q { color: var(--brand); }
+.faq-icon {
+  font-size: 1.25rem;
+  color: var(--brand);
+  flex-shrink: 0;
+  transition: transform 0.22s;
+  font-weight: 700;
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a {
+  display: none;
+  padding: 14px 20px 18px;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  border-top: 1px solid var(--border);
+}
+.faq-item.open .faq-a { display: block; }
+
+/* ── GARANTIA ── */
+.garantia-bg { background: var(--dark-bg); }
+.garantia-box {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 80px 24px;
+}
+.garantia-icon { font-size: 3.5rem; margin-bottom: 16px; }
+.garantia-box h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  color: #f1f5f9;
+  margin-bottom: 14px;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+.garantia-box p { font-size: 0.97rem; color: #94a3b8; line-height: 1.72; max-width: 500px; margin: 0 auto; }
+
+/* ── FINAL CTA ── */
+.final-cta-bg { background: var(--brand); }
+.final-section {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  text-align: center;
+}
+.final-eyebrow { font-size: 0.71rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.65); margin-bottom: 12px; font-family: 'Plus Jakarta Sans', sans-serif; }
+.final-section h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.7rem, 4.2vw, 2.7rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.03em;
+  line-height: 1.16;
+  margin-bottom: 16px;
+}
+.final-section > p { font-size: 1rem; color: rgba(255,255,255,0.78); line-height: 1.7; margin-bottom: 32px; }
+
+.final-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+.final-original { font-size: 1rem; color: rgba(255,255,255,0.5); text-decoration: line-through; }
+.final-value { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.8rem; font-weight: 800; color: #fff; letter-spacing: -0.03em; }
+.final-period { font-size: 0.9rem; color: rgba(255,255,255,0.65); }
+.final-savings { font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-bottom: 22px; }
+
+.cta-final-wrap { max-width: 380px; margin: 0 auto; }
+.cta-final {
+  display: block;
+  width: 100%;
+  background: #fff;
+  color: var(--brand);
+  padding: 19px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  text-decoration: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: transform 0.15s, box-shadow 0.18s;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+.cta-final:hover { transform: translateY(-2px); box-shadow: 0 8px 36px rgba(0,0,0,0.22); }
+.cta-final-sub { font-size: 0.75rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+.trust-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 100px;
+  padding: 7px 16px;
+  color: rgba(255,255,255,0.82);
+  font-size: 0.77rem;
+  font-weight: 500;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: #0a0d14;
+  color: #475569;
+  text-align: center;
+  padding: 32px 24px;
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+footer a { color: #64748b; text-decoration: none; }
+footer a:hover { color: #94a3b8; }
+
+/* ── STICKY MOBILE CTA ── */
+.sticky-cta {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: rgba(13,17,23,0.97);
+  backdrop-filter: blur(10px);
+  padding: 10px 14px;
+  z-index: 200;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.sticky-cta a {
+  display: block;
+  background: var(--brand);
+  color: #fff;
+  text-align: center;
+  padding: 14px;
+  border-radius: 9px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-decoration: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: background 0.18s;
+  box-shadow: 0 2px 12px var(--brand-glow);
+}
+.sticky-cta a:hover { background: var(--brand-dark); }
+.sticky-cta-sub { text-align: center; font-size: 0.7rem; color: #475569; margin-top: 5px; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero h1    { animation: fadeUp 0.55s ease both 0.05s; }
+.hero-sub   { animation: fadeUp 0.55s ease both 0.15s; }
+.price-box  { animation: fadeUp 0.55s ease both 0.25s; }
+.trust-row  { animation: fadeUp 0.55s ease both 0.35s; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.52s ease, transform 0.52s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media (min-width: 600px) {
+  .dor-grid { grid-template-columns: repeat(2, 1fr); }
+  .testi-grid { grid-template-columns: repeat(2, 1fr); }
+  .screenshots-grid { grid-template-columns: repeat(2, 1fr); }
+  .sticky-cta { display: none; }
+}
+@media (min-width: 900px) {
+  .dor-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  🔒 Pagamento seguro &nbsp;·&nbsp; <b>7 dias grátis</b> — sem cobrar nada agora &nbsp;·&nbsp; Cancele quando quiser
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <img src="data:image/png;base64,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zUeJGp/Nr7zxoweZPuXMFM/X/vf7a9X/AFmo9f8Avf7a9X/WajxI1P5tfeeNGDzJ9y5gpn6/97/bXq/6zUeJGp/Nr7zxoweZPuXMFM/X/vf7a9X/AFmo9f8Avf7a9X/WajxI1P5tfeeNGDzJ9y5gpn6/97/bXq/6zUeJGp/Nr7zxoweZPuXMFM/X/vf7a9X/AFmo9f8Avf7a9X/WajxI1P5tfeeNGDzJ9y5gpn6/97/bXq/6zUeJGp/Nr7zxoweZPuXMFM/X/vf7a9X/AFmo9f8Avf7a9X/WajxI1P5tfeeNGDzJ9y5gpn6/97/bXq/6zUeJGp/Nr7zxoweZPuXMFM/X/vf7a9X/AFmo9f8Avf7a9X/WajxI1P5tfeeNGDzJ9y5gpn6/97/bXq/6zUeJGp/Nr7zxoweZPuXMFM/X/vf7a9X/AFmo9f8Avf7a9X/WajxI1P5tfeeNGDzJ9y5gpn6/97/bXq/6zUeJGp/Nr7zxoweZPuXMFM/X/vf7a9X/AFmo9f8Avf7a9X/WajxI1P5tfeeNGDzJ9y5gpn6/97/bXq/6zUeJGp/Nr7zxoweZPuXMFM/X/vf7a9X/AFmo9f8Avf7a9X/WajxI1P5tfeeNGDzJ9y5gpn6/97/bXq/6zUeJGp/Nr7zxoweZPuXMFM/X/vf7a9X/AFmo9f8Avf7a9X/WajxI1P5tfeeNGDzJ9y5gpn6/97/bXq/6zUeJGp/Nr7zxoweZPuXMFM/X/vf7a9X/AFmo9f8Avf7a9X/WajxI1P5tfeeNGDzJ9y5gpn6/97/bXq/6zUeJGp/Nr7zxoweZPuXMFM/X/vf7a9X/AFmo9f8Avf7a9X/WajxI1P5tfeeNGDzJ9y5gpn6/97/bXq/6zUeJGp/Nr7zxoweZPuXMFM/X/vf7a9X/AFmo9f8Avf7a9X/WajxI1P5tfeeNGDzJ9y5gpn6/97/bXq/6zUeJGp/Nr7zxoweZPuXMFM/X/vf7a9X/AFmo9f8Avf7a9X/WajxI1P5tfeeNGDzJ9y5gpn6/97/bXq/6zU" alt="UniFin">
+  </div>
+  <a class="nav-cta" href="https://buy.stripe.com/5kQ00k9a52Fl8Fed6S0kE02" data-cta="nav_testar_gratis">Testar grátis →</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="badge"><span class="badge-dot"></span>Oferta por tempo limitado</div>
+  <h1>Sua empresa fatura bem.<br>Mas onde está indo <em>o lucro</em>?</h1>
+  <p class="hero-sub">A maioria dos donos de PME não sabe o lucro real da empresa, mistura dinheiro pessoal com o da empresa e toma decisões no feeling. O UniFin muda isso — do primeiro dia.</p>
+
+  <div class="price-box">
+    <div class="price-tag-label">Acesso completo ao sistema</div>
+    <div class="price-original">De R$ 229,90/mês</div>
+    <div class="price-promo">
+      <span class="currency">R$</span>
+      <span class="value">149<span style="font-size:2rem">,90</span></span>
+      <span class="period">/mês</span>
+    </div>
+    <div class="price-savings">🎉 Você economiza R$ 80,00 por mês</div>
+    <div class="trial-notice">✅ <strong>7 dias completamente grátis.</strong> Sem cobrar nada agora. Cancele se não gostar — simples assim.</div>
+    <a class="cta-main" href="https://buy.stripe.com/5kQ00k9a52Fl8Fed6S0kE02" data-cta="hero_comecar_agora">Quero controle financeiro de verdade →</a>
+    <p class="cta-sub">Sem compromisso · Cancelamento em 1 clique · Suporte humano incluso</p>
+  </div>
+
+  <div class="trust-row">
+    <div class="trust-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1776f4" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Pagamento seguro
+    </div>
+    <div class="trust-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1776f4" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Pronto em 5 minutos
+    </div>
+    <div class="trust-item">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1776f4" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      Suporte humano incluso
+    </div>
+  </div>
+</div>
+
+<!-- MOCKUP -->
+<div class="mockup-wrap reveal">
+  <img src="mockup.png" alt="Dashboard do UniFin">
+</div>
+
+<!-- PROVA SOCIAL -->
+<div class="proof-bar reveal">
+  <div class="proof-bar-inner">
+    <div class="proof-stat">
+      <div class="proof-num">+500</div>
+      <div class="proof-label">PMEs usando hoje</div>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-stat">
+      <div class="proof-num">7 dias</div>
+      <div class="proof-label">Grátis, sem cartão agora</div>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-stat">
+      <div class="proof-num">12+</div>
+      <div class="proof-label">Módulos integrados</div>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-stat">
+      <div class="proof-num">5 min</div>
+      <div class="proof-label">Para começar a usar</div>
+    </div>
+  </div>
+</div>
+
+<!-- DORES — DARK -->
+<div class="dor-bg" data-section="problems">
+  <section>
+    <p class="section-eyebrow">Você se identifica?</p>
+    <h2 class="section-title">Estas situações estão custando dinheiro à sua empresa agora.</h2>
+    <p class="section-sub">São sinais clássicos de que o financeiro está no piloto automático — e cada mês assim é dinheiro que vai embora sem você perceber.</p>
+
+    <div class="dor-grid">
+      <div class="dor-item reveal">
+        <div class="dor-icon">💸</div>
+        <div class="dor-body">
+          <div class="dor-title">Fatura mas não sobra</div>
+          <div class="dor-desc">Você vende bem, mas no final do mês não sabe para onde foi o dinheiro. O lucro real nunca bate com o que você esperava.</div>
+        </div>
+      </div>
+      <div class="dor-item reveal">
+        <div class="dor-icon">🔀</div>
+        <div class="dor-body">
+          <div class="dor-title">Empresa e bolso misturados</div>
+          <div class="dor-desc">Você usa a conta da empresa para despesas pessoais e vice-versa. Resultado: ninguém sabe o lucro real — nem você.</div>
+        </div>
+      </div>
+      <div class="dor-item reveal">
+        <div class="dor-icon">😰</div>
+        <div class="dor-body">
+          <div class="dor-title">Susto no caixa</div>
+          <div class="dor-desc">O saldo parece bom, mas você não enxerga as contas vencendo nos próximos 30 dias. Os sustos chegam sem avisar.</div>
+        </div>
+      </div>
+      <div class="dor-item reveal">
+        <div class="dor-icon">🎲</div>
+        <div class="dor-body">
+          <div class="dor-title">Decisão no feeling</div>
+          <div class="dor-desc">Contratar, comprar estoque, abrir filial — tudo decidido na intuição porque não existem números confiáveis para consultar.</div>
+        </div>
+      </div>
+      <div class="dor-item reveal">
+        <div class="dor-icon">📋</div>
+        <div class="dor-body">
+          <div class="dor-title">Planilha bagunçada</div>
+          <div class="dor-desc">Dezenas de abas, fórmulas quebradas e dados espalhados por WhatsApp, e-mail e papel. Ninguém mais entende.</div>
+        </div>
+      </div>
+      <div class="dor-item reveal">
+        <div class="dor-icon">⏰</div>
+        <div class="dor-body">
+          <div class="dor-title">Horas perdidas no financeiro</div>
+          <div class="dor-desc">Fechar o mês, emitir nota, cobrar cliente atrasado — tudo manual. Você administra planilha em vez de administrar empresa.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- SOLUÇÃO — como o sistema resolve cada dor -->
+<section data-section="solucao">
+  <p class="section-eyebrow">O que o UniFin resolve</p>
+  <h2 class="section-title">De "acho que estou bem" para "sei exatamente onde estou".</h2>
+  <p class="section-sub">Cada dor que você sentiu acima tem uma resposta direta dentro do sistema. Sem precisar de contador, sem planilha, sem achismo.</p>
+
+  <div class="solucao-list">
+    <div class="solucao-item reveal">
+      <div class="solucao-num">01</div>
+      <div class="solucao-body">
+        <div class="solucao-title">Separação total entre empresa e bolso do sócio</div>
+        <div class="solucao-desc">O UniFin tem módulos 100% separados para PJ (empresa) e PF (sócio). Pró-labore rastreado, extrato independente e relatórios distintos por perfil. A Receita Federal e o Banco Central recomendam — o UniFin torna simples de fazer.</div>
+        <span class="solucao-tag">✔ Elimina a maior confusão do pequeno empresário</span>
+      </div>
+    </div>
+    <div class="solucao-item reveal">
+      <div class="solucao-num">02</div>
+      <div class="solucao-body">
+        <div class="solucao-title">Previsão de caixa: você vê o futuro antes que ele chegue</div>
+        <div class="solucao-desc">Projeção diária, semanal e mensal com 3 cenários: otimista, realista e pessimista. Alerta automático de risco de liquidez e capital de giro calculado na hora. Chega de susto no caixa.</div>
+        <span class="solucao-tag">✔ Antecipação no lugar de surpresa</span>
+      </div>
+    </div>
+    <div class="solucao-item reveal">
+      <div class="solucao-num">03</div>
+      <div class="solucao-body">
+        <div class="solucao-title">DRE real e automático — o lucro verdadeiro da empresa</div>
+        <div class="solucao-desc">DRE mensal, trimestral e anual com margem bruta, margem operacional e análise de cada categoria de gasto. Pare de achar que tem lucro. Comece a saber.</div>
+        <span class="solucao-tag">✔ Responde "qual é o meu lucro real?" com dados</span>
+      </div>
+    </div>
+    <div class="solucao-item reveal">
+      <div class="solucao-num">04</div>
+      <div class="solucao-body">
+        <div class="solucao-title">Alertas automáticos via WhatsApp e e-mail</div>
+        <div class="solucao-desc">Vencimentos, cobranças atrasadas, boletos a pagar — o sistema avisa antes do prazo. Nunca mais pague multa por esquecimento ou perca cliente por não cobrar a tempo.</div>
+        <span class="solucao-tag">✔ No app que você já usa, sem abrir outro sistema</span>
+      </div>
+    </div>
+    <div class="solucao-item reveal">
+      <div class="solucao-num">05</div>
+      <div class="solucao-body">
+        <div class="solucao-title">NFS-e emitida diretamente pelo sistema</div>
+        <div class="solucao-desc">Sem entrar no portal da prefeitura todo mês. Sincronização automática, aprovação de notas recebidas e histórico completo. O processo que levava horas vira minutos.</div>
+        <span class="solucao-tag">✔ Integrado com a prefeitura — simples e legal</span>
+      </div>
+    </div>
+    <div class="solucao-item reveal">
+      <div class="solucao-num">06</div>
+      <div class="solucao-body">
+        <div class="solucao-title">Dashboard com IA — dados que falam por si</div>
+        <div class="solucao-desc">Score financeiro automático, KPIs em tempo real, insights de inteligência artificial sobre padrões e tendências. Você entra no sistema e já sabe o que precisa saber.</div>
+        <span class="solucao-tag">✔ Decisão com base em dados, não em intuição</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÓDULOS -->
+<div class="modulos-bg" data-section="modulos">
+  <section>
+    <p class="section-eyebrow">Tudo em um sistema</p>
+    <h2 class="section-title">12 módulos integrados. Uma só plataforma.</h2>
+    <p class="section-sub">Chega de usar 4 ferramentas diferentes que não conversam entre si. O UniFin centraliza tudo que sua PME precisa.</p>
+
+    <div class="modulos-grid">
+      <div class="modulo-card reveal">
+        <div class="modulo-icon">📊</div>
+        <h3>Dashboard estratégico</h3>
+        <p>KPIs, alertas inteligentes e score financeiro em tempo real.</p>
+      </div>
+      <div class="modulo-card reveal">
+        <div class="modulo-icon">🔀</div>
+        <h3>Financeiro PJ + PF</h3>
+        <p>Empresa e pessoal do sócio separados com pró-labore rastreado.</p>
+      </div>
+      <div class="modulo-card reveal">
+        <div class="modulo-icon">📈</div>
+        <h3>Previsão de caixa</h3>
+        <p>Projeção futura com 3 cenários e alertas de liquidez.</p>
+      </div>
+      <div class="modulo-card reveal">
+        <div class="modulo-icon">💳</div>
+        <h3>Contas a pagar/receber</h3>
+        <p>Baixa em lote, multa e juros automáticos, alertas de vencimento.</p>
+      </div>
+      <div class="modulo-card reveal">
+        <div class="modulo-icon">📑</div>
+        <h3>DRE completo</h3>
+        <p>Mensal, trimestral e anual com análise de margens por categoria.</p>
+      </div>
+      <div class="modulo-card reveal">
+        <div class="modulo-icon">🧾</div>
+        <h3>Emissão NFS-e</h3>
+        <p>Nota fiscal de serviço emitida direto pelo sistema, integrada à prefeitura.</p>
+      </div>
+      <div class="modulo-card reveal">
+        <div class="modulo-icon">📋</div>
+        <h3>Ordens de serviço</h3>
+        <p>Abertura, checklist, acompanhamento e encerramento de OS.</p>
+      </div>
+      <div class="modulo-card reveal">
+        <div class="modulo-icon">👥</div>
+        <h3>Clientes e contratos</h3>
+        <p>Cadastro completo, propostas, contratos com auditoria.</p>
+      </div>
+      <div class="modulo-card reveal">
+        <div class="modulo-icon">🏦</div>
+        <h3>Conciliação bancária</h3>
+        <p>Open Finance, múltiplas contas e importação automática de transações.</p>
+      </div>
+      <div class="modulo-card reveal">
+        <div class="modulo-icon">🔐</div>
+        <h3>Equipe e permissões</h3>
+        <p>Perfis de acesso por módulo, auditoria de alterações e aprovação de cadastros.</p>
+      </div>
+      <div class="modulo-card reveal">
+        <div class="modulo-icon">💼</div>
+        <h3>Finanças pessoais</h3>
+        <p>Metas, investimentos, dívidas e cartões do sócio — separados da empresa.</p>
+      </div>
+      <div class="modulo-card reveal">
+        <div class="modulo-icon">🔔</div>
+        <h3>Alertas e notificações</h3>
+        <p>WhatsApp, e-mail, lembretes automáticos — você não precisa lembrar de nada.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- SCREENSHOTS -->
+<section style="padding-top:0;" data-section="screenshots">
+  <p class="section-eyebrow">Veja o sistema</p>
+  <h2 class="section-title">Interface limpa. Dados que fazem sentido.</h2>
+  <p class="section-sub">Criado para dono de empresa — não para contador. Você entende o que está vendo no primeiro acesso.</p>
+  <div class="screenshots-grid">
+    <div class="screenshot-item reveal">
+      <img src="sistema1.jpg" alt="Dashboard principal UniFin">
+      <div class="screenshot-label">Dashboard com KPIs em tempo real</div>
+    </div>
+    <div class="screenshot-item reveal">
+      <img src="sistema2.jpg" alt="Relatórios UniFin">
+      <div class="screenshot-label">DRE e relatórios automáticos</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<div class="testi-bg" data-section="testimonials">
+  <section>
+    <p class="section-eyebrow">Quem já usa</p>
+    <h2 class="section-title">Resultados reais de quem parou de operar no escuro.</h2>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>Eu achava que tinha lucro… mas era ilusão. Com o UniFin descobri custos escondidos que eu não via na planilha. Ajustei em poucas semanas e o caixa mudou de figura. Não consigo imaginar voltar para planilha.</blockquote>
+        <div class="testi-author">
+          <div class="testi-avatar">CS</div>
+          <div><div class="testi-name">Carlos S.</div><div class="testi-role">Fisioterapeuta — Clínica própria, SP</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>O que me convenceu foi separar meu dinheiro pessoal do da empresa. Parece óbvio, mas eu nunca tinha feito isso direito. Hoje sei exatamente o que está acontecendo. Tomei a melhor decisão do ano.</blockquote>
+        <div class="testi-author">
+          <div class="testi-avatar">JM</div>
+          <div><div class="testi-name">Juliana M.</div><div class="testi-role">Empreendedora — Estética, MG</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>A previsão de caixa salvou minha empresa. Vi 3 semanas antes que ia faltar dinheiro e consegui renegociar com fornecedor a tempo. Antes eu só descobria quando já tinha dado ruim.</blockquote>
+        <div class="testi-author">
+          <div class="testi-avatar">RP</div>
+          <div><div class="testi-name">Ricardo P.</div><div class="testi-role">Dono de oficina mecânica, RS</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>Emitir NFS-e direto no sistema mudou minha semana. Antes eu perdia 2 horas no portal da prefeitura. Hoje faço em 5 minutos e o sistema já lança na conta a receber automaticamente. Incrível.</blockquote>
+        <div class="testi-author">
+          <div class="testi-avatar">AM</div>
+          <div><div class="testi-name">Ana M.</div><div class="testi-role">Consultora de RH, RJ</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- COMPARATIVO -->
+<section data-section="comparison">
+  <p class="section-eyebrow">Por que o UniFin?</p>
+  <h2 class="section-title">Compare com o que você usa hoje.</h2>
+  <p class="section-sub">Planilha, caderninho ou outro sistema genérico não foi feito para a realidade da PME brasileira.</p>
+  <div class="comparison-wrap reveal">
+    <div class="comparison-box">
+      <div class="comparison-header">
+        <div class="col-1">Recurso</div>
+        <div class="col-2">Planilha</div>
+        <div class="col-3">Outros ERPs</div>
+        <div class="col-4">UniFin ✦</div>
+      </div>
+      <div class="comparison-row">
+        <div class="col-1">Separação PJ e PF do sócio</div>
+        <div class="col-2 cross">✗</div>
+        <div class="col-3 cross">✗</div>
+        <div class="col-4 check">✓</div>
+      </div>
+      <div class="comparison-row">
+        <div class="col-1">Previsão de caixa com cenários</div>
+        <div class="col-2 cross">✗</div>
+        <div class="col-3 check-partial">Parcial</div>
+        <div class="col-4 check">✓</div>
+      </div>
+      <div class="comparison-row">
+        <div class="col-1">Emissão NFS-e integrada</div>
+        <div class="col-2 cross">✗</div>
+        <div class="col-3 check-partial">Pago à parte</div>
+        <div class="col-4 check">✓</div>
+      </div>
+      <div class="comparison-row">
+        <div class="col-1">DRE automático e relatórios</div>
+        <div class="col-2 cross">✗</div>
+        <div class="col-3 check-partial">Parcial</div>
+        <div class="col-4 check">✓</div>
+      </div>
+      <div class="comparison-row">
+        <div class="col-1">Alertas via WhatsApp</div>
+        <div class="col-2 cross">✗</div>
+        <div class="col-3 cross">✗</div>
+        <div class="col-4 check">✓</div>
+      </div>
+      <div class="comparison-row">
+        <div class="col-1">Conciliação bancária (Open Finance)</div>
+        <div class="col-2 cross">✗</div>
+        <div class="col-3 check-partial">Parcial</div>
+        <div class="col-4 check">✓</div>
+      </div>
+      <div class="comparison-row">
+        <div class="col-1">Insights com inteligência artificial</div>
+        <div class="col-2 cross">✗</div>
+        <div class="col-3 cross">✗</div>
+        <div class="col-4 check">✓</div>
+      </div>
+      <div class="comparison-row">
+        <div class="col-1">Feito para PME brasileira</div>
+        <div class="col-2 cross">✗</div>
+        <div class="col-3 cross">✗</div>
+        <div class="col-4 check">✓</div>
+      </div>
+      <div class="comparison-row">
+        <div class="col-1">Preço acessível para PME</div>
+        <div class="col-2 check">✓</div>
+        <div class="col-3 cross">✗</div>
+        <div class="col-4 check">✓</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<div class="garantia-bg" data-section="garantia">
+  <div class="garantia-box">
+    <div class="garantia-icon reveal">🛡️</div>
+    <h2 class="section-title" style="color:#f1f5f9;" class="reveal">7 dias para testar. Zero risco.</h2>
+    <p class="reveal" style="color:#94a3b8;font-size:0.97rem;line-height:1.72;max-width:500px;margin:0 auto;">
+      Você tem 7 dias completos para usar o sistema à vontade, com acesso a todos os módulos. Se não gostar — por qualquer motivo — cancela com 1 clique, sem precisar ligar pra ninguém e sem pagar nada. Simples assim.
+    </p>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section data-section="faq">
+  <p class="section-eyebrow">Dúvidas frequentes</p>
+  <h2 class="section-title">Respondendo antes que você pergunte.</h2>
+  <div class="faq-list">
+    <div class="faq-item reveal">
+      <div class="faq-q" data-faq="cartao">Preciso cadastrar cartão de crédito para testar? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Depende do método que você escolher no cadastro. Você pode começar sem cartão e informar apenas na hora de assinar. Os 7 dias são 100% grátis e sem compromisso — nenhuma cobrança durante o período de teste.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" data-faq="cancelamento">E se eu quiser cancelar? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Você cancela quando quiser, direto na plataforma, em menos de 2 minutos. Sem burocracia, sem precisar ligar para ninguém, sem letra miúda.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" data-faq="conhecimento">Preciso entender de finanças para usar? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Não. O UniFin foi criado para donos de negócio, não para contadores. A interface é simples e você já entende os dados no primeiro dia. Se tiver dúvida, o suporte humano está disponível por WhatsApp.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" data-faq="tipo_empresa">Funciona para qualquer tipo de empresa? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Sim. O UniFin atende prestadores de serviço, comércio e pequenas indústrias. Tem suporte nativo ao Simples Nacional e emissão de NFS-e municipal. Se você tem faturamento e custos, o UniFin funciona para você.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" data-faq="nfse">A emissão de NFS-e funciona para minha cidade? <span class="faq-icon">+</span></div>
+      <div class="faq-a">O sistema suporta integração com prefeituras que utilizam os padrões mais comuns de NFS-e. Você pode verificar a compatibilidade no momento do cadastro ou perguntar pelo suporte antes de assinar.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" data-faq="equipe">Posso dar acesso para minha equipe? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Sim. O sistema tem gestão de funcionários com permissões por módulo — você define quem pode ver o quê. Tem também auditoria completa de todas as alterações feitas por cada usuário.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" data-faq="suporte">Tenho suporte se precisar de ajuda? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Sim. Suporte humano por WhatsApp e e-mail incluso no plano, disponível para tirar dúvidas e ajudar na configuração. Você não fica sozinho.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" data-faq="dados">Meus dados ficam seguros? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Sim. Os dados são armazenados com criptografia e o acesso é controlado por autenticação segura. Pagamentos são processados via Stripe, uma das plataformas de pagamento mais seguras do mundo.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<div class="final-cta-bg" data-section="final_cta">
+  <div class="final-section">
+    <p class="final-eyebrow">Última chamada</p>
+    <h2>Cada mês sem controle é dinheiro indo embora. A decisão de mudar custa zero agora.</h2>
+    <p>7 dias grátis, acesso completo, suporte humano. Você sai na frente em menos de 5 minutos.</p>
+
+    <div class="final-price-row">
+      <span class="final-original">R$ 229,90/mês</span>
+      <span class="final-value">R$ 149,90</span>
+      <span class="final-period">/mês</span>
+    </div>
+    <p class="final-savings">Economize R$ 80,00 todo mês — por tempo limitado</p>
+
+    <div class="cta-final-wrap">
+      <a class="cta-final" href="https://buy.stripe.com/5kQ00k9a52Fl8Fed6S0kE02" data-cta="final_comecar_agora">Quero meu teste grátis de 7 dias →</a>
+      <p class="cta-final-sub">7 dias grátis · Cancele quando quiser · Sem burocracia · Suporte humano incluso</p>
+    </div>
+
+    <div class="trust-badges">
+      <div class="trust-badge">🔒 Pagamento seguro via Stripe</div>
+      <div class="trust-badge">✔ Sem cobrança nos 7 dias</div>
+      <div class="trust-badge">💬 Suporte por WhatsApp</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 UniFin · Desenvolvido por <strong>Mori Tech — Soluções Tecnológicas</strong></p>
+  <p style="margin-top:6px;">Todos os direitos reservados.</p>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta">
+  <a href="https://buy.stripe.com/5kQ00k9a52Fl8Fed6S0kE02" data-cta="sticky_mobile_testar">🚀 Começar grátis por 7 dias — R$ 149,90/mês</a>
+  <p class="sticky-cta-sub">Sem cobrança agora · Cancele quando quiser</p>
+</div>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
+});
+
+// Reveal on scroll
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+
+<!-- ═══════════════════════════════════════════════════════
+     UNIFIN — RASTREAMENTO COMPORTAMENTAL COMPLETO
+     Pixel ID: 4450521855228559
+     Versão: 2.0 | Meta Events Manager + Custom Events
+     ═══════════════════════════════════════════════════════ -->
+<script>
+(function () {
+  'use strict';
+  var pageLoadTime = Date.now();
+  var fired = {};
+  var sessionId = Math.random().toString(36).substr(2, 9);
+
+  function once(key, fn) { if (!fired[key]) { fired[key] = true; fn(); } }
+
+  function fbEvent(eventName, params) {
+    if (typeof fbq === 'undefined') return;
+    var base = { session_id: sessionId, page: 'unifin_lp_controle' };
+    fbq('trackCustom', eventName, Object.assign({}, base, params || {}));
+  }
+
+  function fbStandard(eventName, params) {
+    if (typeof fbq === 'undefined') return;
+    fbq('track', eventName, params || {});
+  }
+
+  window.addEventListener('load', function () {
+    fbStandard('ViewContent', { content_name: 'UniFin Controle Financeiro LP', content_category: 'landing_page', value: 149.90, currency: 'BRL' });
+  });
+
+  var scrollMilestones = [25, 50, 75, 90];
+  function getScrollPct() {
+    var el = document.documentElement;
+    var scrolled = el.scrollTop || document.body.scrollTop;
+    var total = el.scrollHeight - el.clientHeight;
+    return total > 0 ? Math.round((scrolled / total) * 100) : 0;
+  }
+  window.addEventListener('scroll', function () {
+    var pct = getScrollPct();
+    scrollMilestones.forEach(function (m) {
+      if (pct >= m) once('scroll_' + m, function () { fbEvent('ScrollDepth', { percent: m, time_on_page_sec: Math.round((Date.now() - pageLoadTime) / 1000) }); });
+    });
+  }, { passive: true });
+
+  [30, 60, 120, 180].forEach(function (sec) {
+    setTimeout(function () { once('time_' + sec, function () { fbEvent('TimeOnPage', { seconds: sec, scroll_pct: getScrollPct() }); }); }, sec * 1000);
+  });
+
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-cta]');
+    if (!el) return;
+    var cta = el.getAttribute('data-cta');
+    var timeToClick = Math.round((Date.now() - pageLoadTime) / 1000);
+    fbStandard('InitiateCheckout', { content_name: 'UniFin Controle Financeiro', value: 149.90, currency: 'BRL', num_items: 1 });
+    fbEvent('CTAClick', { cta_id: cta, time_to_click_sec: timeToClick, scroll_at_click: getScrollPct() });
+    if (cta === 'sticky_mobile_testar') fbStandard('Lead', { content_name: 'UniFin Mobile CTA', value: 149.90, currency: 'BRL' });
+  });
+
+  var sectionEls = document.querySelectorAll('[data-section]');
+  if (sectionEls.length && 'IntersectionObserver' in window) {
+    var sectionObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var name = entry.target.getAttribute('data-section');
+          once('section_' + name, function () { fbEvent('SectionViewed', { section: name, time_sec: Math.round((Date.now() - pageLoadTime) / 1000) }); });
+          sectionObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    sectionEls.forEach(function (el) { sectionObs.observe(el); });
+  }
+
+  document.querySelectorAll('[data-faq]').forEach(function (el) {
+    el.addEventListener('click', function () { fbEvent('FAQOpened', { faq_id: el.getAttribute('data-faq') }); });
+  });
+
+  document.addEventListener('mouseleave', function (e) {
+    if (e.clientY <= 10) once('exit_intent', function () { fbEvent('ExitIntent', { scroll_pct: getScrollPct(), time_on_page_sec: Math.round((Date.now() - pageLoadTime) / 1000) }); });
+  });
+
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) once('tab_hidden', function () { fbEvent('TabHidden', { scroll_pct: getScrollPct(), time_on_page_sec: Math.round((Date.now() - pageLoadTime) / 1000) }); });
+  });
+
+  var mockupImg = document.querySelector('.mockup-wrap img');
+  if (mockupImg) {
+    mockupImg.style.cursor = 'zoom-in';
+    mockupImg.addEventListener('click', function () { once('mockup_click', function () { fbEvent('MockupClicked', { scroll_pct: getScrollPct() }); }); });
+  }
+})();
+</script>
+<!-- ═══════════════════════════════════════════════════════ -->
+
+</body>
+</html>
